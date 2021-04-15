@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      var day;
+      var week = new Date().getDay(); //getDay()함수는 현재 날짜의 요일을 가져오는 함수, 0~6까지의 숫자로 가져옴.
+
+      switch (week) {
+        case 0:
+          day = "일요일";
+          break; // switch문 탈출
+        case 1:
+          day = "월요일";
+          break;
+        case 2:
+          day = "화요일";
+          break;
+        case 3:
+          day = "수요일";
+          break;
+        case 4:
+          day = "목요일";
+          break;
+        case 5:
+          day = "금요일";
+          break;
+        case 6:
+          day = "토요일";
+          break;
+      }
+      console.log("오늘은 " + day + "입니다."); //문자열 연결연사자 사용
+      console.log(week);
+      console.log(day);
+
+      //   if else문으로 대체
+      day = ""; //위 switch문 day 초기화
+      week = new Date().getDay();
+      if (week == 1) {
+        day = "월요일";
+      } else if (week == 2) {
+        day = "화요일";
+      } else if (week == 3) {
+        day = "수요일";
+      } else if (week == 4) {
+        day = "목요일";
+      } else if (week == 5) {
+        day = "금요일";
+      } else if (week == 6) {
+        day = "토요일";
+      } else if (week == 0) {
+        day = "일요일";
+      }
+      console.log("오늘은 " + day + "입니다."); //문자열 연결연사자 사용
+      alert(day);
+    </script>
+  </head>
+  <body></body>
+</html>

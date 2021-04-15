@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // for : 가장 많이 사용하는 반복문
+      for (var i = 0; i < 10; i++) {
+        console.log(i);
+      }
+
+      // 문제1) *for문 합구하는 문제
+      var result = 0; //javascript에서는 변수값을 꼭 초기화 해야함. 아니면 undefined(비정수)로 됨.
+      for (var i = 1; i < 11; i++) {
+        result = result + i;
+      }
+      console.log("1~10가지의 합은" + result + "입니다.");
+
+      //while문 : 가장 기본적인 반복문
+      var count = 0;
+      while (count < 10) {
+        console.log(count);
+        count++;
+      }
+
+      // 문제2) *while문 합구하는 문제
+      var count = 1;
+      var result = 0;
+      while (count < 11) {
+        result = result + count;
+        count++;
+      }
+      console.log("1~10가지의 합은" + result + "입니다.");
+
+      // 문제3) *for문을 사용하여 지정한 구구단의 단수를 출력하는 프로그램 작성
+      // var dan = prompt("출력할 구구단 단수를 입력해 주세요");
+      // dan = Number(dan);
+      // for (var i = 1; i < 10; i++) {
+      //   console.log(dan + "*" + i + "=" + dan * i);
+      // }
+
+      // prompt() : 자바스크립트에서 사용자 입력을 받기 위한 함수
+      // Number() : 데이터를 숫자형 타입으로 변환하는 함수, 문자열형 데이터를 숫자형으로 변환함.
+      //   var num=prompt("숫자를 입력해 주세요");
+      //   num=Number(num);
+      //   alert("입력한 숫자는"+num+"입니다.")
+
+
+      // 문제4) *for문을 사용 구구단 전체 출력하기 => 외부for문 1번루프에 내부for문 전체 루프
+      for (var i = 2; i < 10; i++) {
+        for (var j = 1; j < 10; j++) {
+          console.log(i + "*" + j + "=" + i * j);
+        }
+      }
+
+      // 문제6) 사용자에게서 숫자를 입력받아 홀수 인지 짝수인지 구분하는 프로그램을 작성하시오
+      var x = prompt("아무 숫자나 입력하세요");
+      x = Number(x);
+      if(x % 2 == 0){
+          console.log("짝수입니다.");
+      }
+      else {
+          console.log("홀수입니다.");
+      }
+
+
+      // 문제7) 1~100까지의 숫자 중 3의 배수를 화면에 모드 출력하고, 몇개인지 개수도 함께 출력하는 프로그램을 작성하시오
+      for(var x=1;x<=100;x++){
+          if(x%3==0) {
+              console.log("3의배수: " + x);
+              count++;
+      }
+      }
+      console.log("3의배수는 총" + count + "개 입니다.");
+      
+    </script>
+  </head>
+  <body></body>
+</html>
